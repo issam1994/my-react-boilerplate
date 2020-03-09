@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import Logo from '../logo.svg'
 
 export default function Nav() {
@@ -8,7 +9,7 @@ export default function Nav() {
         { path: '/login', name: 'Login' },
     ]
     const NavLinks = pages.map((p, i) => (
-        <div key={i} className="px-6 py-4 text-lg font-bold">{p.name}</div>
+        <Link to={p.path} key={i} className="px-6 py-4 text-lg font-bold">{p.name}</Link>
     ))
     return (
         <div className="bg-gray-100 shadow">

@@ -4,6 +4,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 //tailwindcss
 import './styles/index.css'
+//transitions
+import './styles/transitions.css'
 //store
 import {StoreProvider} from 'easy-peasy'
 import store from './store'

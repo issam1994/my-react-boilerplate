@@ -1,9 +1,9 @@
 import {createStore} from 'easy-peasy'
 import auth from './models/auth'
 
-const storeModel = {
+const rootModel = {
     auth
 }
-const store = createStore(storeModel);
+const store = createStore(rootModel);
 
 export default store;

@@ -9,7 +9,9 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gray-200">
         <Nav />
-        <RouterView />
+        <div className="container mx-auto py-4">
+          <RouterView />
+        </div>
       </div>
     </Router>
   );

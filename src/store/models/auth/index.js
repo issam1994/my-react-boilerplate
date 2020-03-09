@@ -1,4 +1,5 @@
 import { computed, action, thunk } from 'easy-peasy'
+import axios from 'axios'
 
 const authModel = {
     //state

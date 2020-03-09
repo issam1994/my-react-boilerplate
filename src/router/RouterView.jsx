@@ -1,5 +1,5 @@
 import React from 'react'
-//views/pages
+//views - pages
 import Home from '../views/Home'
 import Login from '../views/Login'
 import Profile from '../views/Profile'
@@ -23,7 +23,7 @@ export default function () {
                     {({ match }) => (
                         <CSSTransition
                             in={match != null}
-                            timeout={300}
+                            timeout={200}
                             classNames="slide"
                             unmountOnExit
                         >

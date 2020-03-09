@@ -13,27 +13,28 @@
   transition: opacity 200ms;
 }
 
-/* scale & fade  */
+/* slide left  */
 .slide-enter {
   position: absolute;
+  width: 100%;
   opacity: 0;
-  margin-left: -2rem;
+  margin-left: -5rem;
 }
 .slide-enter-active {
   opacity: 1;
   margin-left: 0;
-  transition: opacity 300ms, margin 300ms;
+  transition: opacity 200ms, margin 200ms;
 }
 .slide-exit {
+  opacity: 0;
+  margin-left: 0rem;
+}
+.slide-exit-active {
   position: absolute;
   opacity: 0;
   margin-left: 0rem;
 }
 /* scale  */
-.container {
-  position: relative;
-}
-
 .page {
   position: absolute;
   left: 15px;

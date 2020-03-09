@@ -4,3 +4,10 @@
 /* purgecss end ignore */
 
 @tailwind  utilities;
+
+/* setting font  */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}

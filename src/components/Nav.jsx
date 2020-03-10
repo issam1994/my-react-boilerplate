@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import Logo from '../logo.svg'
 
 const pages = [
-    { path: '/', name: 'Home' },
-    { path: '/profile', name: 'Profile' },
-    { path: '/login', name: 'Login' },
+    { path: '/', name: 'Home', isPublic: false },
+    { path: '/profile', name: 'Profile', isPublic: false },
+    { path: '/login', name: 'Login', isPublic: true },
 ]
 export default function Nav() {
     const NavLinks = pages.map((p, i) => (

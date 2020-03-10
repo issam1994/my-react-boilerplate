@@ -11129,6 +11129,14 @@ video {
   transition-duration: 1000ms;
 }
 
+/* setting font  */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

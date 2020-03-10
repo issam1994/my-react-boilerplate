@@ -14,7 +14,7 @@ export default function Login() {
                 <input id="password" className="form-input w-full bg-gra" type="password" placeholder="Enter Password" />
             </div>
             <div className="px-4 py-2">
-                <button class=" uppercase py-3 w-full text-lg text-white font-semibold bg-teal-600 rounded-lg shadow">
+                <button className=" uppercase py-3 w-full text-lg text-white font-semibold bg-teal-600 rounded-lg shadow">
                     sign in
                 </button>
             </div>
@@ -35,7 +35,7 @@ export default function Login() {
                 <input id="password" className="form-input w-full bg-gra" type="password" placeholder="Re-enter Password" />
             </div>
             <div className="px-4 py-2">
-                <button class=" uppercase py-3 w-full text-lg text-white font-semibold bg-blue-600 rounded-lg shadow">
+                <button className=" uppercase py-3 w-full text-lg text-white font-semibold bg-blue-600 rounded-lg shadow">
                     sign up
                 </button>
             </div>
@@ -53,10 +53,10 @@ export default function Login() {
                 </div>
                 {/* body  */}
                 <div className="relative bg-white overflow-hidden">
-                    <CSSTransition in={currentTab === 'login'} classNames='slide' unmountOnExit>
+                    <CSSTransition in={currentTab === 'login'} timeout={0} classNames='slide' unmountOnExit>
                         {tabs[currentTab]}
                     </CSSTransition>
-                    <CSSTransition in={currentTab === 'register'} classNames='slide' unmountOnExit>
+                    <CSSTransition in={currentTab === 'register'} timeout={0} classNames='slide' unmountOnExit>
                         {tabs[currentTab]}
                     </CSSTransition>
                 </div>

@@ -9,6 +9,8 @@ import './styles/transitions.css'
 //store
 import {StoreProvider} from 'easy-peasy'
 import store from './store'
+//axios config
+import './config/axios'
 
 ReactDOM.render(<StoreProvider store={store}><App /></StoreProvider>, document.getElementById('root'));
 

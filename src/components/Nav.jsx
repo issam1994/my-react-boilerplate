@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import {useStoreState, useStoreActions} from 'easy-peasy'
 import Logo from '../logo.svg'
 
@@ -8,10 +8,13 @@ const pages = [
     { path: '/profile', name: 'Profile', forGuests: false },
     { path: '/login', name: 'Login', forGuests: true },
 ]
-export default function Nav() {
+function Nav({location}) {
+    //store stuff
     const isAuthenticated = useStoreState(state => state.auth.isAuthenticated)
-    console.log("isAuthenticated: ", isAuthenticated)
     const logOut = useStoreActions(actions => actions.auth.destroyToken)
+    //active route style
+    const activeRouteStyle = (path) => location.pathname === path ? {borderBottom: '4px solid teal'} : {borderBottom: '4px solid white'}
+    //generating nav links
     const NavLinks = pages
     .filter(({forGuests}, i) => {
         if(isAuthenticated) {
@@ -21,10 +24,11 @@ export default function Nav() {
         }
     })
     .map(({path, name}, i) => (
-        <Link to={path} key={i} className="px-6 py-4 text-lg">{name}</Link>
+        <Link style={activeRouteStyle(path)} to={path} key={i} className="px-6 py-4 text-lg">{name}</Link>
     ))
+    //log out button
     const logoutButton = (
-        <button onClick={logOut} className="bg-red-600 px-6 py-3">log out</button>
+        <button onClick={logOut} className="bg-gray-300 text-blue-300 font-semibold px-6 py-2 rounded-lg">log out</button>
     )
     return (
         <div className="bg-gray-100 shadow">
@@ -38,3 +42,5 @@ export default function Nav() {
         </div>
     )
 }
+
+export default withRouter(Nav)

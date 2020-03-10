@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
+import {useStoreActions} from 'easy-peasy'
 
 export default function Login() {
     const [currentTab, setCurrentTab] = useState('login')
+    const fakeLogin = useStoreActions(actions => actions.auth.saveToken)
     const LoginTabBody = (
         <div>
             <div className="px-4 py-2">
@@ -14,7 +16,7 @@ export default function Login() {
                 <input id="password" className="form-input w-full bg-gra" type="password" placeholder="Enter Password" />
             </div>
             <div className="px-4 py-2">
-                <button className=" uppercase py-3 w-full text-lg text-white font-semibold bg-teal-600 rounded-lg shadow">
+                <button onClick={() => fakeLogin("FAKETOKEN-XXX")} className=" uppercase py-3 w-full text-lg text-white font-semibold bg-teal-600 rounded-lg shadow">
                     sign in
                 </button>
             </div>

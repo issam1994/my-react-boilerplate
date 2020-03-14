@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 //tailwindcss
-import './styles/index.css'
+import './styles/output/tailwindcss.css'
 //transitions
-import './styles/transitions.css'
+import './styles/output/transitions.css'
 //store
 import {StoreProvider} from 'easy-peasy'
 import store from './store'

@@ -1,5 +1,5 @@
 # attention
-you will have to refresh the page when you run the dev server with yarn start. That's a bug I can't get arround yet. It is caused by concurrently.
+you will have to refresh the page when you run the dev server for the first time. That's a bug I can't get arround yet. It is caused by concurrently. Concurrently was installed to make postcss watch the css files.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

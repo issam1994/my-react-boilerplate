@@ -17,3 +17,6 @@ body {
        @apply flex items-center justify-center;
     }
 }
+/* .gradient {
+    background: linear-gradient(to right, theme('colors.red.600'),theme('colors.green.600'))
+} */

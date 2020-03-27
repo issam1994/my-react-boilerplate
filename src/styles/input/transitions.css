@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 .fade-enter {
   opacity: 0;
 }
@@ -35,30 +36,32 @@
   margin-left: 0rem;
 }
 /* scale  */
-.page {
+.scale {
   position: absolute;
   left: 15px;
   right: 15px;
 }
 
-.page-enter {
+.scale-enter {
   opacity: 0;
   transform: scale(1.1);
 }
 
-.page-enter-active {
+.scale-enter-active {
   opacity: 1;
   transform: scale(1);
   transition: opacity 300ms, transform 300ms;
 }
 
-.page-exit {
+.scale-exit {
   opacity: 1;
   transform: scale(1);
 }
 
-.page-exit-active {
+.scale-exit-active {
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms;
 }
+
+/* purgecss end ignore  */
